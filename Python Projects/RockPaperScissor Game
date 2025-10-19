@@ -1,0 +1,58 @@
+import random
+
+#----define r p s--------
+r = "Rock"
+p = "Paper"
+s = "Scissors"
+set_1 = (r,p,s)
+
+while True:
+
+    #----tell computer to choose random--------
+    comp_choice = random.choice(set_1)
+
+    #----take user input if they want to play or quit-------
+    user_choice = input('Rock, Paper, Scissors(r/p/s)?: ').strip().lower()
+
+    #-----invalid input------
+    if user_choice not in ('r','p','s'):
+        print('Enter a valid Input')
+        continue
+    #--- print the user's choice---------
+    if user_choice == 'r':
+        print('You chose Rock')
+    elif user_choice == 'p':
+        print('You chose Paper')
+    elif user_choice == 's':
+        print('You chose Scissors')
+
+    #----determining the winner-------
+    #----draw scenario-----------
+    if (comp_choice == r and user_choice == 'r') or \
+        (comp_choice == p and user_choice == 'p' ) or \
+        (comp_choice == s and user_choice =='s'):
+        print(f'Comp chose {comp_choice} \n >>> GAME DRAW')
+
+    #----rest scenarios
+    elif comp_choice == r:
+        print("Comp chose 🪨")
+        if user_choice == 'p':
+            print('>>> YOU WIN')
+        elif user_choice == 's':
+            print('>>> YOU LOSE')
+    elif comp_choice == p:
+        print("Comp chose 📄")
+        if user_choice == 'r':
+            print('>>> YOU LOSE')
+        elif user_choice == 's':
+            print('>>> YOU WIN')
+    elif comp_choice == s:
+        print("Comp chose ✂️")
+        if user_choice == 'r':
+            print('>>> YOU WIN')
+        elif user_choice == 'p':
+            print('>>> YOU LOSE')
+    continue_game = input('Do you wanna play again(y/n): ').strip().lower()
+    if continue_game != 'y':
+        print("Thanks for playing!\n")
+        break

@@ -1,0 +1,20 @@
+#computer randomly decides a number 
+#takes guess input
+#says too high if number is high
+#too low if number is smaller
+import math
+import random
+my_set = range(1, 100)
+answer = random.choice(my_set)
+while True:
+    try:
+        guessed_num = int(input('Guess a number between 1 and 100: '))
+        if guessed_num > answer:
+            print('Too High!')
+        elif guessed_num < answer:
+            print('Too Low')
+        elif guessed_num == answer:
+            print('Congratulations, You guessed the correct number!!')
+            break
+    except ValueError:
+            print('Enter a valid Input.')
