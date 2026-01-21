@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+nltk
+transformers
+torch
+scikit-learn
+sqlite3
