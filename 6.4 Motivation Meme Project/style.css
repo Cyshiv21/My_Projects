@@ -1,0 +1,30 @@
+html{
+    background-color: black;
+}
+h1{
+    color: antiquewhite;
+    font-family: "Libre Baskerville", serif;
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+p{
+    color: antiquewhite;
+    text-align: center;
+}
+img{
+    width: 100%;
+}
+#image{
+    border: 5px solid white;
+    width: 50%;
+    margin-left: 25%;
+}
+#para{
+    width: 50%;
+    margin-left: 25%;
+}
+#heading{
+    width: 50%;
+    margin-left: 25%;
+}
